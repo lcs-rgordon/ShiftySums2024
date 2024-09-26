@@ -53,20 +53,20 @@ func getInput(withPrompt prompt: String, minimum: Int?, maximum: Int?) -> Int {
     
 }
 
-func shift(value: Int, by places: Int) -> Int {
+func shift(originalValue: Int, by places: Int) -> Int {
     
-    var sum = value
+    // Start sum by making it whatever the original value was
+    var sum = originalValue
     
     // Short circuit results if no shifting required
     if places == 0 {
         return sum
     }
     
-    // Calculate new sum based on number of places
-    // to shift
+    // Calculate new sum by adding powers of 10 of the original value
     for i in 1...places {
         
-        var amountToAdd = value
+        var amountToAdd = originalValue
         
         for _ in 1...i {
             amountToAdd *= 10
