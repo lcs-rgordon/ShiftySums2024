@@ -82,3 +82,15 @@ func shift(value: Int, by places: Int) -> Int {
 // Quick tests
 //print(shift(value: 12, by: 3)) // 13332
 //print(shift(value: 12, by: 1)) // 132
+
+// INTERACTIVE VERSION
+
+// 1. Input
+let n = getInput(withPrompt: "", minimum: 1, maximum: 10_000)
+let k = getInput(withPrompt: "", minimum: 0, maximum: 5)
+
+// 2. Process
+let output = shift(value: n, by: k)
+
+// 3. Output
+print(output)
