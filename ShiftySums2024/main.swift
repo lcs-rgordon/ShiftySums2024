@@ -57,6 +57,13 @@ func shift(value: Int, by places: Int) -> Int {
     
     var sum = value
     
+    // Short circuit results if no shifting required
+    if places == 0 {
+        return sum
+    }
+    
+    // Calculate new sum based on number of places
+    // to shift
     for i in 1...places {
         
         var amountToAdd = value
@@ -73,5 +80,5 @@ func shift(value: Int, by places: Int) -> Int {
 }
 
 // Quick tests
-print(shift(value: 12, by: 3)) // 13332
-print(shift(value: 12, by: 1)) // 132
+//print(shift(value: 12, by: 3)) // 13332
+//print(shift(value: 12, by: 1)) // 132
