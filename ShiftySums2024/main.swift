@@ -61,7 +61,7 @@ func shift(value: Int, by places: Int) -> Int {
         
         var amountToAdd = value
         
-        for j in 1...i {
+        for _ in 1...i {
             amountToAdd *= 10
         }
         
