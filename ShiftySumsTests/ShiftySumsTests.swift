@@ -11,7 +11,7 @@ struct ShiftySumsTests {
 
     @Test func typicalCaseOne() {
         
-        let result = shift(value: 12, by: 3)
+        let result = shift(originalValue: 12, by: 3)
         
         #expect(result == 13332)
         
@@ -19,7 +19,7 @@ struct ShiftySumsTests {
     
     @Test func typicalCaseTwo() {
         
-        let result = shift(value: 12, by: 1)
+        let result = shift(originalValue: 12, by: 1)
         
         #expect(result == 132)
         
@@ -27,7 +27,7 @@ struct ShiftySumsTests {
     
     @Test func boundaryConditionOne() {
         
-        let result = shift(value: 12, by: 0)
+        let result = shift(originalValue: 12, by: 0)
         
         #expect(result == 12)
         
@@ -35,7 +35,7 @@ struct ShiftySumsTests {
 
     @Test func boundaryConditionTwo() {
         
-        let result = shift(value: 12, by: 5)
+        let result = shift(originalValue: 12, by: 5)
         
         #expect(result == 1_333_332)
         
@@ -43,7 +43,7 @@ struct ShiftySumsTests {
     
     @Test func boundaryConditionThree() {
         
-        let result = shift(value: 1, by: 0)
+        let result = shift(originalValue: 1, by: 0)
         
         #expect(result == 1)
         
@@ -51,7 +51,7 @@ struct ShiftySumsTests {
 
     @Test func boundaryConditionFour() {
         
-        let result = shift(value: 10000, by: 0)
+        let result = shift(originalValue: 10000, by: 0)
         
         #expect(result == 10000)
         
@@ -59,7 +59,7 @@ struct ShiftySumsTests {
 
     @Test func boundaryConditionFive() {
         
-        let result = shift(value: 1, by: 5)
+        let result = shift(originalValue: 1, by: 5)
         
         #expect(result == 111_111)
         
@@ -67,7 +67,7 @@ struct ShiftySumsTests {
 
     @Test func boundaryConditionSix() {
         
-        let result = shift(value: 10000, by: 5)
+        let result = shift(originalValue: 10000, by: 5)
         
         #expect(result == 1_111_110_000)
         

@@ -90,7 +90,7 @@ let n = getInput(withPrompt: "", minimum: 1, maximum: 10_000)
 let k = getInput(withPrompt: "", minimum: 0, maximum: 5)
 
 // 2. Process
-let output = shift(value: n, by: k)
+let output = shift(originalValue: n, by: k)
 
 // 3. Output
 print(output)
