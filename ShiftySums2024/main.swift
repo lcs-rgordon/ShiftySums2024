@@ -74,4 +74,4 @@ func shift(value: Int, by places: Int) -> Int {
 
 // Quick tests
 print(shift(value: 12, by: 3)) // 13332
-
+print(shift(value: 12, by: 1)) // 132
